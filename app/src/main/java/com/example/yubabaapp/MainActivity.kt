@@ -41,9 +41,9 @@ class MainActivity : AppCompatActivity() {
 @Composable
 fun YubabaTalk(yubabaViewModel: YubabaViewModel = viewModel()){
 
-    val isSend: Boolean by yubabaViewModel.sendState.observeAsState(initial = false)
-    val inputName: String by yubabaViewModel.inputName.observeAsState("")
-    val yubabaNaming: String by yubabaViewModel.yubabaNaming.observeAsState(initial = "")
+    val isSend: Boolean = yubabaViewModel.sendState
+    val inputName: String = yubabaViewModel.inputName
+    val yubabaNaming: String = yubabaViewModel.yubabaNaming
 
     Column(
         modifier = Modifier.padding(16.dp),
