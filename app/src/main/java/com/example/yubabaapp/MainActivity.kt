@@ -67,7 +67,7 @@ fun InputOrResult(
     val inputState = remember { mutableStateOf(TextFieldValue()) }
     val viewModel = viewModel<YubabaViewModel>()
 
-    Input(isSend,inputState,modifier)
+    InputA(isSend,inputState,modifier)
     when {
         ! isSend -> {
             send(onClick = {
@@ -82,7 +82,7 @@ fun InputOrResult(
 }
 
 @Composable
-fun Input(
+fun InputA(
         isSend: Boolean,
         inputState: MutableState<TextFieldValue>,
         modifier: Modifier)
